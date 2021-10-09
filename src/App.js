@@ -1,31 +1,26 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { Switch, Route } from "react-router-dom";
-
 const Menu = () => {
   return (
     <>
       <Navbar />
       <section className="main-section">
-        
         <h1> Menu</h1>
       </section>
     </>
   );
 };
-
 const Subscription = () => {
   return (
     <>
       <Navbar />
       <section className="main-section">
-        
         <h1>Subscription</h1>
       </section>
     </>
   );
 };
-
 const About = () => {
   return (
     <>

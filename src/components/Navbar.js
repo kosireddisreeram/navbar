@@ -6,7 +6,7 @@ import {CgProfile } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
-  const [showIcons, setShowIcons] = useState(false);
+  const [Menu, setMenu] = useState();
   return (
     <>
       <nav className="main-nav">
@@ -18,9 +18,9 @@ const Navbar = () => {
         </div>
 {/* 2nd menu part  */}
         <div
-          className={
-            showIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
+           className={
+             Menu ? "menu-link " : "menu-link"
+           }>
           <ul>
             <li>
               <NavLink to="/">Menu</NavLink>
@@ -29,19 +29,17 @@ const Navbar = () => {
               <NavLink to="/subscription">Subscription</NavLink>
             </li>
             <li>
-              <NavLink to="/about us">About Us</NavLink>
+              <NavLink to="/about us">About-Us</NavLink>
             </li>
             <li>
               <NavLink to="/data">Data</NavLink>
             </li>
           </ul>
         </div>
-
         {/* 3rd icon section */}
         <div className="icon-section">
           <ul className="icons">
-          
-            <li>
+          <li>
             <a href="#" >
               <BsBag className="bag"/>
               </a>
@@ -51,20 +49,16 @@ const Navbar = () => {
                 <CgProfile className="profile"/>
                 </a>
             </li>
-            
             </ul>
            {/* hamburger menu start  */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowIcons(!showIcons)}>
+            <a href="#" onClick={() => setMenu(!Menu)}>
               <GiHamburgerMenu />
             </a>
           </div>
         </div>
       </nav>
-
-    
-    </>
+   </>
   );
 };
-
 export default Navbar;
