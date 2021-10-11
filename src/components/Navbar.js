@@ -34,6 +34,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/data">Data</NavLink>
             </li>
+            <li>
+              <NavLink to="/sign-in">Sign-In</NavLink>
+            </li>
           </ul>
         </div>
         {/* 3rd icon section */}

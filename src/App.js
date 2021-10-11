@@ -1,6 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Navbar from "./components/Navbar";
-import { Switch, Route } from "react-router-dom";
+// import SideMenu, { menuItems } from "./components/SideMenu";
+import { BrowserRouter as Router,  Route } from "react-router-dom";
+// import Side from "./side.js";
+
+import { Switch } from "react-router-dom";
+import Form from "./Form";
+// import "./Side.css";
+// import { useState } from "react";
+
+
 const Menu = () => {
   return (
     <>
@@ -43,8 +53,19 @@ const Data = () => {
     </>
   );
 };
+const Register = () => {
+  return (
+    <>
+      <Navbar />
+      <section className="main-section">
+      {/* place the sign-in component here */}
+      <Form/>
+      </section>
+    </>
+  );
+};
 
-const App = () => {
+const App = ( ) => {
   return (
     <Switch>
       <Route exact path="/">
@@ -61,6 +82,9 @@ const App = () => {
 
       <Route path="/data">
         <Data/>
+      </Route>
+      <Route path="/sign-in">
+        <Register/>
       </Route>
     </Switch>
   );
